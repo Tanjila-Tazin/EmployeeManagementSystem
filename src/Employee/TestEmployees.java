@@ -13,13 +13,16 @@ public class TestEmployees {
         System.out.println("===============" + "===============");
         System.out.println(" Employee Personal Details");
         System.out.println("===============" + "===============");
-
-        String name;
+        int employee_id;
+        int salary;
         int age;
-        int year;
-        String employeeNum;
+        int phone_number;
+        String name;
+        String address;
+        String email_id;
 
-        List<Employee> employeeList = new ArrayList<Employee>();
+
+        List<EmployeeInformation> employeeList = new ArrayList<EmployeeInformation>();
 
         for (int i = 0; i < 2; i++) {
             int employeeNumber = i + 1;
@@ -31,14 +34,26 @@ public class TestEmployees {
             System.out.print("Enter Employee Age ");
             age = s.nextInt();
 
-            System.out.print("Enter Employee Year");
-            year = s.nextInt();
+            System.out.print("Enter Employee salary ");
+            salary = s.nextInt();
 
             s.nextLine();
-            System.out.print("Enter Employee Enrollment Number");
-            employeeNum = s.nextLine();
+            System.out.print("Enter Employee address ");
+            address = s.nextLine();
 
-            Employee employee = new Employee(name, age, year, employeeNum);
+            System.out.print("Enter Employee email_id ");
+            email_id = s.nextLine();
+            s.nextLine();
+
+            System.out.print("Enter Employee_id  ");
+            employee_id= s.nextInt();
+
+            System.out.print("Enter Employee phone number  ");
+            phone_number= s.nextInt();
+
+
+
+            EmployeeInformation employee =new EmployeeInformation(name, age, salary, address,email_id,phone_number);
 
             employeeList.add(employee);
 
@@ -46,11 +61,11 @@ public class TestEmployees {
         }
 
         for (int j = 0; j < employeeList.size(); j++) {
-            Employee em = employeeList.get(j);
+            EmployeeInformation em = employeeList.get(j);
 
             System.out.println("Employee Number" + (j + 1));
             System.out.println("Name: " + em.getName() + " Age: " + em.getAge()
-                    + " Year:" + em.getYear() + " Enrollment Number: " + em.getemployeeNum());
+                    + " salary:" + em.getSalary() + " address: " + em.getAddress()+ "email_id" +em.getEmail_id()+ "phone_number" +em.phone_number());
 
 
         }
@@ -71,13 +86,14 @@ public class TestEmployees {
                 String n = s.nextLine();
 
                 for (int k = 0; k < employeeList.size(); k++) {
-                    Employee em = employeeList.get(k);
+                    EmployeeInformation em = employeeList.get(k);
                     if ((n.toLowerCase()).equals(em.getName().toLowerCase())) {
                         System.out.println("Employee is present in the database");
                         System.out.println("Details of the Employee");
                         System.out.println("Name: " + em.getName() + " Age: " + em.getAge()
-                                + " Year: " + em.getYear() + " Enrollment Number: "
-                                + em.getemployeeNum());
+                                + " salary:" + em.getSalary() + " address: " + em.getAddress()+ "email_id" +em.getEmail_id()+ "phone_number" +em.phone_number());
+
+
 
 
                         System.exit(0);
@@ -92,7 +108,7 @@ public class TestEmployees {
                 System.out.println("Enter the serial number of employee ");
                 int c = s.nextInt();
 
-                Employee em = employeeList.get(c);
+                EmployeeInformation em = employeeList.get(c);
                 System.out.println("Please enter the new information");
 
 
@@ -105,20 +121,36 @@ public class TestEmployees {
                 age = s.nextInt();
                 em.setAge(age);
 
-                System.out.println("Enter Employee Year");
-                year = s.nextInt();
-                em.setYear(year);
+                System.out.print("Enter Employee salary ");
+                salary = s.nextInt();
+                em.setSalary(salary);
 
                 s.nextLine();
-                System.out.println("Enter Employee Enrollment Number");
-                employeeNum = s.nextLine();
+                System.out.print("Enter Employee address ");
+                address = s.nextLine();
+                em.setAddress(address);
+
+                System.out.print("Enter Employee email_id ");
+                email_id = s.nextLine();
+                em.setEmail_id(email_id);
+                s.nextLine();
+
+                System.out.print("Enter Employee_id  ");
+                employee_id= s.nextInt();
+                em.setEmployee_id(employee_id);
+
+
+                System.out.print("Enter Employee phone number  ");
+                phone_number= s.nextInt();
+                em.setPhone_number(phone_number);
+
 
 
                 System.out.println("Updated Information");
                 System.out.println("Details of the Student");
                 System.out.println("Name: " + em.getName() + " Age: " + em.getAge()
-                        + " Year: " + em.getYear() + " Enrollment Number: "
-                        + em.getemployeeNum());
+                        + " salary:" + em.getSalary() + " address: " + em.getAddress()+ "email_id" +em.getEmail_id()+ "phone_number" +em.phone_number());
+
 
 
         }

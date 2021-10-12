@@ -6,6 +6,5 @@ public class Main {
         EmployeeInformation einfo= new EmployeeInformation();
         TestEmployees testEmployee= new TestEmployees();
         testEmployee.addEmployees();
-
     }
 }
