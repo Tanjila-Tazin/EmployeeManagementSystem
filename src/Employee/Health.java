@@ -1,7 +1,6 @@
-Package EmployeeManagementSystem;
+Package Employee;
 
 public class Health {
-    package Employee;
 
     public class Health {
         String bloodgroup;
