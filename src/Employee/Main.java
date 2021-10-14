@@ -10,7 +10,7 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
-        Employee_Show epv =new Employee_Show();
+        EmployeeShow epv =new EmployeeShow();
 
         int i=0;
 
@@ -27,7 +27,7 @@ public class Main {
                 case 1:
                 {
                     /** Creating class's object and calling Function using that object **/
-                    Employee_Add ep =new Employee_Add();
+                    EmployeeAdd ep =new EmployeeAdd();
                     ep.createFile();
                     break;
                 }
@@ -51,7 +51,7 @@ public class Main {
                 {
                     System.out.print("\nPlease Enter Employee's ID :");
                     String s=sc.nextLine();
-                    Employee_Remove epr =new Employee_Remove();
+                    EmployeeRemove epr =new EmployeeRemove();
                     epr.removeFile(s);
 
                     System.out.print("\nPress Enter to Continue...");
@@ -71,7 +71,7 @@ public class Main {
                     {
                         System.out.println(e);
                     }
-                    Employee_Update epu = new Employee_Update();
+                    EmployeeUpdate epu = new EmployeeUpdate();
                     System.out.print("Please Enter the detail you want to Update :");
                     System.out.print("\nFor Example :\n");
                     System.out.println("If you want to Change the Name, then Enter Current Name and Press Enter. Then write the new Name then Press Enter. It will Update the Name.\n");
