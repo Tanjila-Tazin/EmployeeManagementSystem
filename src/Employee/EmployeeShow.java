@@ -4,7 +4,7 @@ import java.io.File;
 import java.util.Scanner;
 
 
-public class Employee_Show {
+public class EmployeeShow {
 
         public void viewFile(String s) throws Exception
         {
